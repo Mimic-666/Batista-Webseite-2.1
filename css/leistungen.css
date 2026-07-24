@@ -1,0 +1,766 @@
+.bg-innen {
+    background-color: lightgray;
+}
+
+.bg-gala {
+    background-color: rgb(190, 211, 181);
+}
+
+.pageContent {
+
+    margin-left: 300px;
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 40vh;
+
+    overflow: hidden;
+
+}
+
+.hero img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.heroOverlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, .45);
+
+    color: white;
+
+}
+
+.heroOverlay h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+
+}
+
+.heroOverlay p {
+
+    font-size: 1.3rem;
+
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.services {
+
+    padding-top: 100px;
+
+    background: #f5f5f5;
+
+}
+
+.servicesLayout {
+
+    display: block;
+
+}
+
+.servicesSidebar {
+
+    position: fixed;
+
+    top: 90px;
+
+    left: 0;
+
+    width: 300px;
+
+    padding: 50px 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+}
+
+.sidebarNav {
+
+    margin-bottom: 80px;
+
+}
+
+.sidebarNav a {
+
+    display: block;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eee;
+
+    color: #333;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+.sidebarNav a:hover {
+
+    color: var(--primary);
+
+    padding-left: 10px;
+
+}
+
+.sidebarContact {
+
+    background: #222;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 3px;
+
+}
+
+.sidebarContact h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.sidebarContact p {
+
+    margin-bottom: 25px;
+
+    line-height: 1.7;
+
+}
+
+.sidebarButton {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 3px;
+
+    transition: .3s;
+
+}
+
+.sidebarButton:hover {
+
+    background: #b9551f;
+
+}
+
+/* ===========================
+   Leistungen
+=========================== */
+
+.service {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0;
+
+    padding-bottom: 100px;
+
+    position: relative;
+
+    scroll-margin-top: 100px;
+
+}
+
+.service.reverse {
+
+    flex-direction: row-reverse;
+
+}
+
+.serviceImage img {
+
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    transition: opacity .6s ease;
+
+}
+
+.serviceCard {
+
+    flex: 0 0 48%;
+
+    background: white;
+
+    padding: 55px;
+
+    border-radius: 3px;
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .15);
+
+    position: relative;
+
+    margin-left: -90px;
+
+    z-index: 2;
+
+}
+
+.serviceCard h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.serviceCard p {
+
+    line-height: 1.8;
+
+    color: #555;
+
+}
+
+.service.reverse .serviceCard {
+
+    margin-left: 0;
+
+    margin-right: -90px;
+
+}
+
+.mebtn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.85rem 1.8rem;
+
+    background: transparent;
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: all .25s ease;
+
+}
+
+.mebtn:hover {
+
+    background: var(--primary);
+    color: #fff;
+
+    transform: translateY(-2px);
+
+}
+
+.mebtn:active {
+
+    transform: translateY(0);
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+.slide-left {
+
+    opacity: 0;
+
+    transform: translateX(-120px);
+
+    transition: .7s ease;
+
+}
+
+.slide-right {
+
+    opacity: 0;
+
+    transform: translateX(120px);
+
+    transition: .7s ease;
+
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+/* ==========================
+   Leistungen Tablet
+========================== */
+
+@media (max-width:1100px) {
+
+    .pageContent {
+        margin-left: 240px;
+    }
+
+    .servicesSidebar {
+        width: 240px;
+        padding: 40px 25px;
+    }
+
+    .serviceCard {
+        padding: 40px;
+        margin-left: -50px;
+    }
+
+    .service.reverse .serviceCard {
+        margin-right: -50px;
+    }
+
+    .serviceImage img {
+        height: 420px;
+    }
+
+    .heroOverlay h1 {
+        font-size: 3rem;
+    }
+
+}
+
+/* ==========================
+   Leistungen Smartphone
+========================== */
+
+@media (max-width:768px) {
+
+    .pageContent {
+        margin-left: 0;
+    }
+
+    .hero {
+        height: 30vh;
+        min-height: 220px;
+    }
+
+    .heroOverlay h1 {
+        font-size: 2.4rem;
+    }
+
+    .heroOverlay p {
+        font-size: 1rem;
+    }
+
+    .services {
+        padding-top: 40px;
+    }
+
+    .servicesSidebar {
+        position: static;
+        width: 100%;
+        padding: 0 0 40px;
+    }
+
+    .sidebarNav {
+        margin-bottom: 30px;
+    }
+
+    .sidebarContact {
+        margin-top: 20px;
+    }
+
+    .service,
+    .service.reverse {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 60px;
+    }
+
+    .serviceImage,
+    .serviceCard {
+        width: 100%;
+    }
+
+    .serviceImage img {
+        height: 260px;
+    }
+
+    .serviceCard,
+    .service.reverse .serviceCard {
+        margin: 0;
+        padding: 30px;
+    }
+
+    .slide-left,
+    .slide-right {
+        transform: none;
+    }
+
+}
+
+/* ===========================
+   Service Modal
+=========================== */
+
+.serviceModal{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:stretch;
+
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:opacity .3s ease, visibility .3s ease;
+
+    z-index:9999;
+
+}
+
+.serviceModal.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+/* ===========================
+   Panel
+=========================== */
+
+.serviceModalContent{
+
+    position:relative;
+
+    width:min(700px,100%);
+    height:100vh;
+
+    background:#fff;
+
+    overflow-y:auto;
+
+    box-shadow:-12px 0 35px rgba(0,0,0,.18);
+
+    transform:translateX(100%);
+    transition:transform .35s ease;
+
+}
+
+.serviceModal.active .serviceModalContent{
+
+    transform:translateX(0);
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.modalHero{
+
+    width:100%;
+
+}
+
+.modalImage{
+
+    display:block;
+
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+/* ===========================
+   Inhalt
+=========================== */
+
+.modalContent{
+
+    padding:45px;
+
+}
+
+.modalImage {
+    transition: opacity .3s ease;
+}
+
+.modalTitle{
+
+    font-size:2.2rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.modalBody{
+
+    color:#555;
+
+    line-height:1.9;
+
+}
+
+.modalBody p{
+
+    margin-bottom:22px;
+
+}
+
+.modalBody h3{
+
+    margin:40px 0 15px;
+
+    color:var(--primary);
+
+}
+
+.modalBody ul{
+
+    margin:20px 0;
+
+    padding-left:24px;
+
+}
+
+.modalBody li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.modalCTA{
+
+    margin-top:50px;
+
+    padding-top:35px;
+
+    border-top:1px solid #e5e5e5;
+
+    text-align:center;
+
+}
+
+.modalCTA h3{
+
+    margin-bottom:15px;
+
+}
+
+.modalCTA p{
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   Schließen
+=========================== */
+
+.closeModal{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.92);
+
+    color:#333;
+
+    font-size:2rem;
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:20;
+
+}
+
+.closeModal:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:rotate(90deg);
+
+}
+
+.modalCTA .ctaButton{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:3px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.modalCTA .ctaButton:hover{
+
+    background:#b9551f;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+.serviceModalContent::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.serviceModalContent::-webkit-scrollbar-thumb{
+
+    background:#c8c8c8;
+
+    border-radius:999px;
+
+}
+
+.serviceModalContent::-webkit-scrollbar-track{
+
+    background:#f3f3f3;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:900px){
+
+    .serviceModalContent{
+
+        width:560px;
+
+    }
+
+}
+
+/* ===========================
+   Smartphone
+=========================== */
+
+@media (max-width:768px){
+
+    .serviceModal{
+
+        justify-content:center;
+
+    }
+
+    .serviceModalContent{
+
+        width:100%;
+        height:100vh;
+
+    }
+
+    .modalImage{
+
+        height:220px;
+
+    }
+
+    .modalContent{
+
+        padding:30px 25px;
+
+    }
+
+    .modalTitle{
+
+        font-size:1.9rem;
+
+    }
+
+}

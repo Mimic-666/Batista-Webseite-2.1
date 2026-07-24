@@ -1,0 +1,102 @@
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+
+    height:28vh;
+
+    background:#222;
+
+    position:relative;
+
+}
+
+.heroOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.heroOverlay h1{
+
+    font-size:3.2rem;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   Inhalt
+========================== */
+
+.legal{
+
+    padding:90px 0;
+
+}
+
+.legal .container{
+
+    max-width:900px;
+
+}
+
+.legal h2{
+
+    margin-top:50px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.legal h2:first-child{
+
+    margin-top:0;
+
+}
+
+.legal p{
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+@media (max-width:768px){
+
+    .heroOverlay h1{
+        font-size:2.3rem;
+    }
+
+    .heroOverlay p{
+        font-size:1rem;
+        width:90%;
+    }
+
+    .legal{
+        padding:60px 0;
+    }
+
+    .legal h2{
+        font-size:1.5rem;
+    }
+
+}
